@@ -42,6 +42,8 @@ for i in range(2):
     for j in range(2):
         B[i] += g[i, j] * b[j]
 
+print(B)
+
 # контрвариантные компоненты вектора b в декартовом ортонорм. базисе e
 # c^j = ai * T^ij
 c_ = Matrix([0, 0])
@@ -62,3 +64,5 @@ C = Matrix([0, 0])
 for i in range(2):
     for j in range(2):
         C[i] += g[i, j] * c[j]
+
+print(C, "\n")

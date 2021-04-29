@@ -1,9 +1,9 @@
 from sympy import *
-a = Matrix([1, 0, 1])
+a = Matrix([0, 1, 1])
 T = Matrix([
-    [2, 3, -1],
-    [1, 2, 0],
-    [1, 0, -1]
+    [-3, 2, 2],
+    [2, 4, -5],
+    [-1, -4, -5]
 ])
 
 def e(i, j, k):
@@ -29,3 +29,4 @@ for l in range(3):
         for i in range(3):
             for k in range(3):
                 A[m, l] += a[i] * T[k, l] * e(i, k, m)
+print(A)
