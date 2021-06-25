@@ -1,34 +1,15 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-
-
-
 from sympy import *
 T = Matrix([
-    [1, 0],
-    [6, 2]
+    [0, 0],
+    [1, 1]
 ])
 B = Matrix([
-    [8, 1],
-    [3, 7]
+    [1, 0],
+    [-4, 0]
 ])
 Q = Matrix([
-    [1, 0],
-    [1, 2]
+    [-2, 1],
+    [-2, 0]
 ])
 
 # метрическая матрица g[i,j] = ei * ej
@@ -67,7 +48,8 @@ for m in range(2):
                 C[m , l] += C_[i, k] * P[m, i] * P[l, k]
 
 # вычислим ковариантные компоненты С в базисе е
-Cst = C^ml * gms * glt 
+# Cst = C^ml * gms * glt 
+
 c = Matrix([
     [0, 0],
     [0, 0]
@@ -77,3 +59,5 @@ for s in range(2):
         for m in range(2):
             for l in range(2):
                 c[s, t] += C[m, l] * g[m, s] * g[l, t]
+
+# print(c)
